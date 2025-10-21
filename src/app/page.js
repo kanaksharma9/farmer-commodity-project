@@ -16,8 +16,7 @@ export default function Page() {
       </div>
       <div className='flex space-x-8 m-36 '>
           <div>
-            <p className='text-1xl text-white my-24 font-sans font-bold'>kejdhghwjqkl;wqkjhgvfwdhbxskmlxjnhbvcgxfvhbjnkjhg <br/>
-            ytfrdesrdtfyguhijokpkjihukygjchb</p>
+            <p className='text-1xl text-white my-24 font-sans font-bold'> A web platform for farmers to list, manage, and sell agricultural commodities like crops or livestock.<br/>Buyers can browse listings, check prices, and send inquiries, with features for inventory tracking and price updates.</p>
           </div>
           <div>
             <Image className="mx-40 rounded-2xl"  width={500} height={500} src="/farmer.jpg" alt='image'/>
