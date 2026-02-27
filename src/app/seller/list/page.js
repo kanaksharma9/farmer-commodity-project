@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, React } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation'
 
 function Page(){
