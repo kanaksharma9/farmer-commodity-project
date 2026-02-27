@@ -1,6 +1,5 @@
-FROM node:18
+FROM node:20
 WORKDIR /app
-# Only copy package.json so Docker ignores the Windows lockfile
 COPY package.json ./
 RUN npm install
 COPY . .
