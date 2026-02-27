@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/mongodb";
 import Crop from "@/models/lists";
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(request) {
   await connectDB();
   const body = await request.json(); 

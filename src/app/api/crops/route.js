@@ -2,21 +2,23 @@ import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/mongodb";
 import Item from "@/models/crops";
 
+export const dynamic = 'force-dynamic'; // <--- YOU MUST ADD THIS LINE
+
 export async function POST(request) {
   await connectDB();
   const { crop } = await request.json();
 
-if (!crop?.trim()) {
-  return NextResponse.json(
-    { error: "crop is required" },
-    { status: 400 }
-  );
-}
+  if (!crop?.trim()) {
+    return NextResponse.json(
+      { error: "crop is required" },
+      { status: 400 }
+    );
+  }
 
-const newItem = new Item({ crop });
-await newItem.save();
+  const newItem = new Item({ crop });
+  await newItem.save();
 
-return NextResponse.json({ message: "Crop added" });
+  return NextResponse.json({ message: "Crop added" });
 }
 
 export async function GET() {
